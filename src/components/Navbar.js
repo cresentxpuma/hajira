@@ -1,13 +1,119 @@
-// import {Nav} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaHome } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 
-function NavigationBar() {
+import {
+  faLightbulb,
+  faImages,
+  faSyncAlt,
+  faPlusCircle,
+  faBars,
+  faTimes,
+  faSignInAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import bhLogo from './assets/images/bhLogo.png'; // Ensure correct path for your logo
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <>
-     <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </>
-  );
-}
+    <nav className="bg-dark-navbg text-light-text shadow-lg w-full flex flex-col md:flex-row items-center py-8 px-12 relative">
+      {/* Logo Section */}
+      <div className="flex justify-start w-full md:w-auto">
+        <img src={bhLogo} alt="Logo" className="w-32" />
+      </div>
 
-export default NavigationBar;
+      {/* Main Navbar Links */}
+      <div className="flex-grow flex justify-center items-center space-x-8 md:space-x-10 mt-4 md:mt-0">
+        <Link to="/" className="text-[#c9c9c9] hover:text-light-nav transition-colors flex items-center">
+          <FaHome className="w-6 h-6 mr-2" />
+          Home
+        </Link>
+        <Link to="/about" className="text-[#c9c9c9] hover:text-light-nav transition-colors flex items-center">
+          <FontAwesomeIcon icon={faLightbulb} className="mr-2 w-6 h-6" />
+          About Us
+        </Link>
+        <Link to="/gallery" className="text-[#c9c9c9] hover:text-light-nav transition-colors flex items-center">
+          <FontAwesomeIcon icon={faImages} className="mr-2 w-6 h-6" />
+          Gallery
+        </Link>
+        <Link to="/refund" className="text-[#c9c9c9] hover:text-light-nav transition-colors flex items-center">
+          <FontAwesomeIcon icon={faSyncAlt} className="mr-2 w-6 h-6" />
+          Refund
+        </Link>
+        <Link to="/addons" className="text-[#c9c9c9] hover:text-light-nav transition-colors flex items-center">
+          <FontAwesomeIcon icon={faPlusCircle} className="mr-2 w-6 h-6" />
+          Add-Ons
+        </Link>
+      </div>
+
+      {/* Book Now Button */}
+      <div className="flex justify-center md:justify-end w-full md:w-auto mt-4 md:mt-0">
+        <button
+          onClick={() => alert('Book Now functionality here')}
+          className="text-sm xl:text-base px-3 lg:px-5 py-2 lg:py-3 text-gray-200 bg-gradient-to-r from-[#ecb409] to-[#f0c137] tracking-wider hover:from-[#f0c137] hover:to-[#ecb409] rounded-lg transition duration-300"
+        >
+          <FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
+          BOOK NOW
+        </button>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden flex items-center text-light-nav focus:outline-none mt-4 md:mt-0"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="w-6 h-6" />
+      </button>
+
+      {/* Mobile Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-dark-navbg text-[#c9c9c9] px-6 py-4 space-y-2 absolute top-16 left-0 w-full">
+          <Link to="/" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+            <FaHome className="mr-2 w-6 h-6" />
+            Home
+          </Link>
+          <Link to="/about" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+            <FontAwesomeIcon icon={faLightbulb} className="mr-2 w-6 h-6" />
+            About Us
+          </Link>
+          <Link to="/gallery" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+            <FontAwesomeIcon icon={faImages} className="mr-2 w-6 h-6" />
+            Gallery
+          </Link>
+          <Link to="/refund" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+            <FontAwesomeIcon icon={faSyncAlt} className="mr-2 w-6 h-6" />
+            Refund
+          </Link>
+          <Link to="/addons" className="block py-2" onClick={() => setIsMenuOpen(false)}>
+            <FontAwesomeIcon icon={faPlusCircle} className="mr-2 w-6 h-6" />
+            Add-Ons
+          </Link>
+        </div>
+      )}
+
+<div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#f0c137] text-black py-4 px-8 text-sm lg:text-base flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-10 rounded-tl-3xl">
+      <Link to="/location" className="text-lg mx-2">Hyderabad</Link>
+      <Link to="/contact" className="text-lg mx-2">admin@bingebash.com</Link>
+      <Link to="/contact" className="text-lg mx-2">+91 9948954545</Link>
+
+      {/* Social Media Icons */}
+      <div className="flex space-x-12 text-2xl mt-2 md:mt-0">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          <FaInstagram />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          <FaYoutube />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          <FaFacebook />
+        </a>
+      </div>
+    </div>
+    </nav>
+  );
+};
+
+export default Navbar;
