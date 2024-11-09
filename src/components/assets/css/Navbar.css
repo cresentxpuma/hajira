@@ -1,0 +1,14 @@
+/* Navbar.css */
+
+.rectangular-box {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: #ccc; /* Change to preferred color */
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
