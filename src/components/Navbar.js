@@ -31,23 +31,23 @@ const Navbar = () => {
       {/* Main Navbar Links */}
       <div className='mt-14 ml-[30%] flex space-x-8'>
         <div className="flex-grow flex justify-center items-center space-x-8 md:space-x-10 mt-4 md:mt-0">
-          <Link to="/" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
+          <Link to="/" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
             <FaHome className="w-6 h-6 mr-2" />
             HOME
           </Link>
-          <Link to="/about" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
+          <Link to="/about" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
             <FontAwesomeIcon icon={faLightbulb} className="mr-2 w-6 h-6" />
             ABOUT US
           </Link>
-          <Link to="/gallery" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
+          <Link to="/gallery" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
             <FontAwesomeIcon icon={faImages} className="mr-2 w-6 h-6" />
             GALLERY          
             </Link>
-          <Link to="/refund" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
+          <Link to="/refund" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
             <FontAwesomeIcon icon={faSyncAlt} className="mr-2 w-6 h-6" />
             REFUND
           </Link>
-          <Link to="/addons" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
+          <Link to="/addons" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
             <FontAwesomeIcon icon={faPlusCircle} className="mr-2 w-6 h-6" />
             ADD-ONS
           </Link>
@@ -63,6 +63,8 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      <hr className="my-6 sm:my-4 md:my-8 border-t border-white mx-4 sm:mx-0" />
+
 
 
 
@@ -119,7 +121,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-    </nav>
+      </nav>
   );
 };
 

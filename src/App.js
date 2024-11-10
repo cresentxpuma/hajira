@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'; // Path to Navbar component
 import Home from './components/Home';
 import Refund from './components/Refund';
 import Footer from './components/Footer';
+import AddOns from './components/AddOns';
 
 // Sample components for each page
 // import Home from './pages/Home';
@@ -25,6 +26,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/refund' element={<Refund/>} />
+        <Route path='/AddOns' element={<AddOns/>} />
+
 
         {/* {<Route path="/about" element={<About />} /> */}
       </Routes>
