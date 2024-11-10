@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Refund from './components/Refund';
 import Footer from './components/Footer';
 import AddOns from './components/AddOns';
+import AboutUs from './components/AboutUs';
 
 // Sample components for each page
 // import Home from './pages/Home';
@@ -18,7 +19,8 @@ function App() {
   ];
 
   return (
-    <Router>
+    <div className='bg-black'>
+    <Router >
       {/* Pass routes to Navbar */}
       <Navbar brandName="My Brand" routes={routes} />
 
@@ -27,6 +29,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path='/refund' element={<Refund/>} />
         <Route path='/AddOns' element={<AddOns/>} />
+        <Route path='/about' element={<AboutUs/>} />
+
 
 
         {/* {<Route path="/about" element={<About />} /> */}
@@ -34,6 +38,7 @@ function App() {
       <Footer/>
 
     </Router>
+    </div>
   );
 }
 

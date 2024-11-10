@@ -13,11 +13,11 @@ export function Home() {
                 {/* Text Section - Left Aligned */}
                 <div className="container mx-auto px-4 sm:px-8 relative flex justify-start items-center h-full">
                     <div className="text-left max-w-2xl text-white z-10">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
                             LET US BRING YOUR
                             <br />
                             <ReactTyped
-                                className="text-[#f0c137] text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                                className="text-[#f0c137] text-3xl sm:text-3xl md:text-4xl lg:text-5xl"
                                 strings={[
                                     "BIRTHDAY",
                                     "ANNIVERSARY",
