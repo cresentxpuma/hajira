@@ -31,23 +31,23 @@ const Navbar = () => {
       {/* Main Navbar Links */}
       <div className='mt-14 ml-[30%] flex space-x-8'>
         <div className="flex-grow flex justify-center items-center space-x-8 md:space-x-10 mt-4 md:mt-0">
-          <Link to="/" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
+          <Link to="/" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
             <FaHome className="w-6 h-6 mr-2" />
             HOME
           </Link>
-          <Link to="/about" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
+          <Link to="/about" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
             <FontAwesomeIcon icon={faLightbulb} className="mr-2 w-6 h-6" />
             ABOUT US
           </Link>
-          <Link to="/gallery" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
+          <Link to="/gallery" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
             <FontAwesomeIcon icon={faImages} className="mr-2 w-6 h-6" />
             GALLERY          
             </Link>
-          <Link to="/refund" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
+          <Link to="/refund" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
             <FontAwesomeIcon icon={faSyncAlt} className="mr-2 w-6 h-6" />
             REFUND
           </Link>
-          <Link to="/addons" className="text-[#fff] hover:text-[#f0c137] transition-colors flex items-center">
+          <Link to="/addons" className="text-[#fff] hover:text-[#f0c137] transition duration-300 flex items-center">
             <FontAwesomeIcon icon={faPlusCircle} className="mr-2 w-6 h-6" />
             ADD-ONS
           </Link>
@@ -103,8 +103,8 @@ const Navbar = () => {
       {/* Purple Section on Top-Right */}
       <div className="absolute top-0 right-0 w-full md:w-auto bg-[#f0c137] text-black py-4 px-40 text-sm lg:text-base flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-10 rounded-bl-3xl">
         <Link to="/location" className="text-lg mx-2 flex"> <FaLocationDot className='text-[25px] mr-2' />Hyderabad</Link>
-        <Link to="/contact" className="text-lg mx-2 flex"><MdEmail className='text-[25px] mr-2'/>admin@bingebash.com</Link>
-        <Link to="/contact" className="text-lg mx-2 flex"> <FaPhone className=' text-[25px] mr-2'/>+91 9948954545</Link>
+        <Link to="/contact" className="text-lg mx-2 flex"><MdEmail className='text-[25px] mr-2'/>admin@bingehall.com</Link>
+        <Link to="/contact" className="text-lg mx-2 flex"> <FaPhone className=' text-[25px] mr-2'/>+91 9999999999</Link>
 
         {/* Social Media Icons */}
         <div className="flex space-x-12 text-2xl mt-2 md:mt-0">
