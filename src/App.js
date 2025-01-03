@@ -6,6 +6,10 @@ import Refund from './components/Refund';
 import Footer from './components/Footer';
 import AddOns from './components/AddOns';
 import AboutUs from './components/AboutUs';
+import Gallery from './components/gallery';
+import Booknow from './components/booknow';
+import TheaterPage from "./components/TheaterPage";
+
 
 // Sample components for each page
 // import Home from './pages/Home';
@@ -24,12 +28,18 @@ function App() {
       {/* Pass routes to Navbar */}
       <Navbar brandName="My Brand" routes={routes} />
 
+
       {/* Define your page routes */}
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/refund' element={<Refund/>} />
         <Route path='/AddOns' element={<AddOns/>} />
         <Route path='/about' element={<AboutUs/>} />
+        <Route path='/gallery' element={<Gallery/>} />
+        <Route path='/booknow' element={<Booknow/>} />
+        <Route path="/:id" element={<TheaterPage />} />
+
+
 
 
 

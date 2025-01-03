@@ -1,0 +1,65 @@
+/* Overall page styling */
+.theater-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Theater card styling */
+  .theater-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Image styling */
+  .theater-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Theater details styling */
+  .theater-details {
+    padding: 20px;
+  }
+  
+  .theater-name {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .theater-people-range
+   {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Button styling */
+  .theater-payment-btn {
+    background-color: #120f0f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .theater-payment-btn:hover {
+    background-color: #ebd917;
+  }
+  
